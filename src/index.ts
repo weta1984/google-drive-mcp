@@ -643,6 +643,8 @@ function createHttpApp(host: string, options?: CreateHttpAppOptions) {
     }
   }
 
+  app.get('/health', (_req, res) => { res.status(200).json({ status: 'ok' }); });
+
   app.post('/mcp', async (req, res) => {
     try {
       const sessionId = req.headers['mcp-session-id'] as string | undefined;
