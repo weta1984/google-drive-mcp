@@ -608,7 +608,7 @@ interface HttpSession {
  * Create an Express app with MCP Streamable HTTP routes.
  * Shared by production (startHttpTransport) and tests.
  */
-const SESSION_IDLE_TIMEOUT_MS = 30 * 60 * 1000; // 30 minutes
+const SESSION_IDLE_TIMEOUT_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 interface CreateHttpAppOptions {
   sessionIdleTimeoutMs?: number;
